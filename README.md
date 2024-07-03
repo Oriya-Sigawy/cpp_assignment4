@@ -71,6 +71,19 @@ All the iterator's constructors have the keyword *explicit*, so no iterator will
     * `hasNext` - checks if the iterator's vector is empty.  
     * `next` - remove the first node from the iterator's vector, makes heap again without it and returns its value.
  
+`GUI`:  
+For the gui I used the library raylib.
+I wrote 2 functions to make the gui, both of them are in the end of Tree.hpp.
+* `<<`: The function is an overload  for the operator <<.
+  The function opens a gui window, starts to draw ,calls to the helper recursive function and finishs to draw.
+  When the user clicks on the X, the function closes the gui window.
+  **PAY ATTENTION - THE PROGRAM WILL NOT CUNTINUE TO RUN UNTILL THE USER WILL CLOSE THE GUI WINDOW!**
+* `draw_tree`: This function draws the node its gets by the parameters it gets, and draws a line from the node to each one of its children. The function computes the location of the node's children by the location of the node itself and other parameters (the height of the gui window, the amount of children the node has)/ The function calls to itself with the computed parameters.
+  
+
+
+
+
 
 Additionally, as requested, I wrote a Main that uses my Tree class.    
 I used complex numbers as the template data. For that, I copied the Complex.cpp, Complex.hpp from the curse github, and added them getters to the real and the image parts of the complex number, function to_string (for the gui) and an overload to the operator > as I did in assignment 2.
