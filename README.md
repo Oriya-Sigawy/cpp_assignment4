@@ -9,7 +9,7 @@ For that, I wrote a TreeNode struct that has:
 
 The pointers to the children are shared_ptrs because I wanted to make sure that every child has exactly one parent, and shared_ptr allow me to count the number of the pointers to the same object.  
   
-The Tree class has 2 constructors, destructor, 3 methods and 6 inner - classes of iterators, and function begin and end to each iterator.  
+The Tree class has 2 constructors, destructor, 5 methods and 6 inner - classes of iterators, and function begin and end to each iterator.  
 I will explain them one by one.  
 
 `Constructors` : 
@@ -23,6 +23,8 @@ I will explain them one by one.
 * `get_k()`: returns the max degree of the tree.
 * `add_root()`: copy the root it gets if the existing root is nullptr.
 * `add_sub_node()`: add a child to a node in the tree.
+*  `get_root()`: returns the tree's root.
+*  `get_depth()`: computes the tree's depth by recursion and returns it.
 
 `Iterators` :  
 Each iterator has a constructor and the methods current, hasNext and next.   
@@ -71,4 +73,4 @@ All the iterator's constructors have the keyword *explicit*, so no iterator will
  
 
 Additionally, as requested, I wrote a Main that uses my Tree class.    
-I used complex numbers as the template data. For that, I copied the Complex.cpp, Complex.hpp from the curse github, and added them getters to the real and the image parts of the complex number, and an overload to the operator > as I did in assignment 2.
+I used complex numbers as the template data. For that, I copied the Complex.cpp, Complex.hpp from the curse github, and added them getters to the real and the image parts of the complex number, function to_string (for the gui) and an overload to the operator > as I did in assignment 2.
