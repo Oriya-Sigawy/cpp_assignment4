@@ -139,7 +139,7 @@ public:
     }
 
     /**
-     * This is a recursice function to return the tree depth.
+     * This is a recursive function to return the tree depth.
      * The idea is that a node's depth is the max between the depth of its children + 1.
      * @returns the tree's depth.
      */
@@ -767,7 +767,7 @@ public:
 };
 
 /**
- * This is a recurcive help function to draw the tree.
+ * This is a recursive help function to draw the tree.
  * The function draws a node in its position regard to its parent and siblings.
  * @param node the node to draw.
  * @param depth the tree's depth, needed to computes the yth value of the center of the node.
@@ -799,7 +799,7 @@ void draw_tree(TreeNode<T> *node, unsigned int depth, unsigned int level, unsign
 
 /**
  * This is an overload for the operator <<.
- * The function opens a window, calls the recurcive help function
+ * The function opens a window, calls the recursive help function
  *     and closes the window when the user click on the X buttom.
  * @param os ostream to return.
  * @param t tree to print.
